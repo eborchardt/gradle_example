@@ -7,8 +7,15 @@ plugins {
 }
 
 // Define Java version
-sourceCompatibility = '11'
-targetCompatibility = '11'
+//sourceCompatibility = '11'
+//targetCompatibility = '11'
+
+// Define Java version using the java block
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
 
 repositories {
     // Use jcenter for resolving dependencies.
